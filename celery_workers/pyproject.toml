@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "celery-workers"
+version = "0.1.0"
+description = ""
+authors = ["Artur A. Galstyan <galstyan.artu@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+celery = "^5.3.6"
+python-dotenv = "^1.0.0"
+sqlalchemy = "^2.0.25"
+psycopg2-binary = "^2.9.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start_workers = "celery_workers.worker:start"
